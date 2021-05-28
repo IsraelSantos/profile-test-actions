@@ -13,5 +13,6 @@ public class ProfileMsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProfileMsApplication.class, args);
 	}
+	
 
 }
