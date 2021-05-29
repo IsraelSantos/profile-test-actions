@@ -15,3 +15,15 @@ jobs:
     - uses: actions/labeler@main
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+		
+  comment-PR:
+  
+    runs-on: ubuntu-latest
+	
+    steps:
+    - uses: actions/checkout@v2
+    - name: Comment Pull Request
+    - uses: thollander/actions-comment-pull-request@master
+      with:
+        message: 'Obrigado por criar a PR. Em breve ela será revisada.'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
