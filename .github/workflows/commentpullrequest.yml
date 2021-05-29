@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Comment Pull Request
-    - user: thollander/actions-comment-pull-request@master
+    - uses: thollander/actions-comment-pull-request@master
       with:
         message: 'Obrigado por criar a PR. Em breve ela será revisada.'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
