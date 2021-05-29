@@ -1,0 +1,15 @@
+# This workflow will comment a Pull Request
+
+name: Comment a Pull Request
+on: pull_request
+
+jobs:
+  comment-and-labels:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Comment Pull Request
+    - user: thollander/actions-comment-pull-request@master
+      with:
+        message: 'Obrigado por criar a PR. Em breve ela será revisada.'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

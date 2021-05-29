@@ -1,12 +1,8 @@
 # This workflow will comment a Pull Request
 
-name: Comment a Pull Request
+name: Label changes in Pull Request
 
-on:
-  push:
-    branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
+on: pull_request
 
 jobs:
   test:
@@ -15,6 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Add Labels to Project 
     - uses: actions/labeler@main
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
