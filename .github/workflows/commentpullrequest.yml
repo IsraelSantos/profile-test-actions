@@ -21,9 +21,6 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - uses: estrada9166/labeler@v1
+    - uses: actions/labeler@main
       with:
-        # The GITHUB_TOKEN secret
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # The path for the config file (root)
-        CONFIG_PATH: labeler-config.yml
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
