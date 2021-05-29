@@ -1,6 +1,6 @@
-# This workflow will Label changes in Pull Request
+# This workflow will Label changes in a Pull Request and Comment
 
-name: Label changes in Pull Request
+name: Label changes in Pull Request and Comment
 
 on: pull_request
 
