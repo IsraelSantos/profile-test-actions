@@ -45,6 +45,7 @@ public class AcademicEducationServiceTests {
         AcademicEducation tmp = service.save(academicEducation);
 
         assertNotEquals(null, tmp.getId());
+        
 
         assertEquals(academicEducation.getAbstractM(), tmp.getAbstractM());
         assertEquals(academicEducation.getEducationalInstitution(), tmp.getEducationalInstitution());

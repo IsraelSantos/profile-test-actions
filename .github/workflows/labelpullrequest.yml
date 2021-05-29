@@ -1,0 +1,29 @@
+# This workflow will Label changes in a Pull Request and Comment
+
+name: Label changes in Pull Request and Comment
+
+on: pull_request
+
+jobs:
+  labels:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add Labels to Project 
+      uses: actions/labeler@main
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  comment-PR:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Comment Pull Request
+      uses: thollander/actions-comment-pull-request@master
+      with:
+        message: 'Obrigado por criar a PR. Em breve ela será revisada.'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
