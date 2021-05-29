@@ -1,4 +1,4 @@
-# This workflow will comment a Pull Request
+# This workflow will Label changes in Pull Request
 
 name: Label changes in Pull Request
 
