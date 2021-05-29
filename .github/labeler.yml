@@ -2,3 +2,5 @@ repo:
   - ./*
 source1:
   - any: ['src/**/*', '!src/docs/*']
+test:
+  - src/test/**/*
