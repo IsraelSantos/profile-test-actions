@@ -1,2 +1,4 @@
-label1:
-  - src/**/*
+repo:
+  - ./*
+source:
+  - any: ['src/**/*', '!src/docs/*']
