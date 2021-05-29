@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Add Labels to Project 
-    - uses: actions/labeler@main
+      uses: actions/labeler@main
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Comment Pull Request
-    - uses: thollander/actions-comment-pull-request@master
+      uses: thollander/actions-comment-pull-request@master
       with:
         message: 'Obrigado por criar a PR. Em breve ela será revisada.'
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
