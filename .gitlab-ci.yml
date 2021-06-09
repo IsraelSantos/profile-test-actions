@@ -1,0 +1,30 @@
+image: maven:latest
+
+stages:
+     - build
+     - test
+     - package
+
+build-production:
+ stage: build
+ script:
+  - mvn compile
+ only:
+  - master
+  
+test-production:
+ stage: test
+ script:
+  - mvn test
+ only:
+  - master
+
+package-production:
+ stage: package
+ only:
+  - master
+ script:
+  - mvn -DskipTests=true package
+ artifacts:
+  paths:
+   - target/app.war
