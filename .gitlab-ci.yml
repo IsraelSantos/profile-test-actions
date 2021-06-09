@@ -27,4 +27,4 @@ package-production:
   - mvn -B -DskipTests=true package --file pom.xml
  artifacts:
   paths:
-   - target/profile-ms.war
+   - target/profile-ms-test-actions-*.jar
