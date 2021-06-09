@@ -8,7 +8,7 @@ stages:
 build-production:
  stage: build
  script:
-  - mvn -B test --file pom.xml
+  - mvn -B compile --file pom.xml
  only:
   - master
   
