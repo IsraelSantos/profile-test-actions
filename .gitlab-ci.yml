@@ -8,14 +8,14 @@ stages:
 build-production:
  stage: build
  script:
-  - mvn compile
+  - mvn -B compile --file pom.xml
  only:
   - master
   
 test-production:
  stage: test
  script:
-  - mvn test
+  - mvn -B test --file pom.xml
  only:
   - master
 
@@ -24,7 +24,7 @@ package-production:
  only:
   - master
  script:
-  - mvn -DskipTests=true package
+  - mvn -B -DskipTests=true package --file pom.xml
  artifacts:
   paths:
    - target/profile-ms.war
