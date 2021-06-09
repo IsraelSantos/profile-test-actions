@@ -1,4 +1,4 @@
-image: maven:latest
+image: maven:3.6.3-openjdk-14
 
 stages:
      - build
@@ -27,4 +27,4 @@ package-production:
   - mvn -DskipTests=true package
  artifacts:
   paths:
-   - target/app.war
+   - target/profile-ms.war
