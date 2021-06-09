@@ -8,6 +8,7 @@ stages:
 build-production:
  stage: build
  script:
+  - apk add sudo
   - sudo mvn -B test --file pom.xml
  only:
   - master
