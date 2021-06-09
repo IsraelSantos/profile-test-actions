@@ -1,4 +1,4 @@
-image: maven:3.6.3-jdk-14
+image: goyalzz/ubuntu-java-8-maven-docker-image
 
 stages:
      - build
@@ -8,7 +8,7 @@ stages:
 build-production:
  stage: build
  script:
-  - mvn -B compile --file pom.xml
+  - mvn -B test --file pom.xml
  only:
   - master
   
