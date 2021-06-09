@@ -1,4 +1,4 @@
-image: goyalzz/ubuntu-java-8-maven-docker-image
+image: maven:3.6.3-jdk-14
 
 stages:
      - build
